@@ -7,10 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import java.util.ArrayList;
@@ -55,7 +52,15 @@ public class Main {
 
         return "index";
     }
+    @RequestMapping("/spa/{.*}")
+    public String spa(){
+        return "spa";
+    }
 
+    @RequestMapping("/spa")
+    public String spa2(){
+        return "spa";
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
