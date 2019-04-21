@@ -17,11 +17,10 @@ public class Main {
 
     @RequestMapping("/")
     String index() {
-
-        return "book name is:"+bookName+" and book author is:" + bookAuthor;
+        return "book name is:"+bookName+" and book author is2222:" + bookAuthor;
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Ch522Application.class, args);
+        SpringApplication.run(Main.class, args);
     }
 }
